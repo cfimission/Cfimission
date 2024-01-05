@@ -42,18 +42,19 @@ body {
 
 .overlay {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
+  
 }
 
 .text h1{
   font-size: 44px;
   font-weight: bold;
   animation: fadeInUp 1.5s ease-out;
-  color: #ffffff;
+  color: #000000;
 }
 
 @keyframes fadeInUp {
@@ -84,10 +85,7 @@ body {
     align-items: center;
 }
 
-.section2 img {
-    width: 100%;
-    height: auto;
-}
+
 .index-p{
     width: 70%;
 }
