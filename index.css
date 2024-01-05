@@ -1,0 +1,65 @@
+.section2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+  }
+
+  .section21, .section22 {
+    flex: 1;
+  }
+
+  .section21 {
+    background-color: #f8f8f8;
+    padding: 3rem;
+    border-radius: 10px;
+  }
+
+  .section22 {
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  .section22 .learnmoreimage {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .btn {
+    background-color: #008CFE;
+
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #383838;
+
+    color: #ffffff;
+  }
+
+  .container {
+  }
+
+  .col-md-4 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .col-md-4 h3 {
+    margin-top: 1rem;
+  }
+
+  .coursel{
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+    .coursel{
+      flex-direction: column;
+    }
+  }
