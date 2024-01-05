@@ -395,10 +395,22 @@ ul {
         flex-direction: column;
     }
 
-.text  h1{
-  font-size: 14px;
-
-}
+    .overlay {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      
+    }
+    
+    .text h1{
+      font-size: 14px;
+      font-weight: bold;
+      animation: fadeInUp 1.5s ease-out;
+      color: #000000;
+    }
 
     .btn {
         width: 100%;
