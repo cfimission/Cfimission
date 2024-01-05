@@ -217,4 +217,8 @@
     .coursel{
       flex-direction: column;
     }
+    .aboutimage{
+      height: auto;
+      width: 100%;
+     }
   }
