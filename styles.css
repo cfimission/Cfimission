@@ -12,7 +12,8 @@ body {
 
 /* Navbar styles */
 .navbar {
-    background-color: #E8B00B;
+    background-color: #23ee11
+;
 }
 .active{
   color: #008CFE !important
@@ -99,7 +100,8 @@ body {
     gap: 2rem;
     font-size: 20px;
     font-weight: bold;
-    background-color: #E8B00B;
+    background-color: #23ee11
+;
     color: white;
 }
 
