@@ -58,26 +58,12 @@
     </nav>
 
 <div class="banner">
-  <h1>Resources</h1>
+  <h1>Gallery</h1>
 </div>
 
 <div style="padding-top: 10px;">
   <div class="container text-center">
-    <div class="row">
-      <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
-        <img src="./img/20120812_175817.jpg" class="img-fluid" alt="" srcset="">
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
-        <img src="./img/20120812_180330.jpg" class="img-fluid" alt="" srcset="">
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
-        <img src="./img/20120812_180341.jpg" class="img-fluid" alt="" srcset="">
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
-        <img src="./img/20120819_165144.jpg" class="img-fluid" alt="" srcset="">
-      </div>   <div class="col-sm-4 col-md-4 col-lg-4 mb-3">
-        <img src="./img/20120819_165208.jpg" class="img-fluid" alt="" srcset="">
-      </div>
+    <div class="row" id="imageContainer">
     </div>
   </div>
 </div>
@@ -140,7 +126,7 @@
         <div class="col-xl-4 col-lg-4 mb-50">
           <div class="footer-widget">
             <div class="footer-logo">
-              <a href="index.html"><img src="./logo.jpeg" class="img-fluid" alt="logo"></a>
+                <a href="index.html"><img src="./logonobg.png" class="img-fluid" alt="logo"></a>
             </div>
             <div class="footer-text">
               <p>
@@ -154,6 +140,9 @@
               <span>Follow us</span>
               <a href="https://www.instagram.com/cfi_ministries?igsh=MWRsOGdzNzFtdnh6dQ=="><iconify-icon icon="skill-icons:instagram" width="35"></iconify-icon></a>
               <a href="https://chat.whatsapp.com/Efy2hknLhQTHYXeSCOJSfH"><iconify-icon icon="logos:whatsapp-icon" width="35"></iconify-icon></i></a>
+              <a href="https://youtube.com/@PastorSureshKumar99?si=Fw-RPhL-4x7-INYW"><iconify-icon icon="icomoon-free:youtube" style="color: red;" width="45"></iconify-icon></a>
+              <a href="https://www.facebook.com/cfimission.marteru--facebook"><iconify-icon icon="logos:facebook" style="color: red;" width="45"></iconify-icon></a>
+         
             </div>
           </div>
         </div>
@@ -191,5 +180,42 @@
   </div>
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+      var imageLinks = [
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704534334/gallery/pjjnelnmqxfvqqe5naeg.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704534334/gallery/wpvzo8axaaazn5ambocd.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704534334/gallery/bgnybxzqtwrz84qfmenz.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531887/gallery/au1vnpw6nfy930wlzoe1.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704534334/gallery/wzxitcxxznw5q0ti5ukm.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704534334/gallery/a2ze9wbhwax2wzmlvr5b.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531885/gallery/ratkut1dliltifzkeqd6.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531886/gallery/scgctrhiomj8o936dvob.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531884/gallery/easf1lf9o10qjs3cgnak.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531884/gallery/xczzyxu0eochgyujjhqa.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531884/gallery/hyhh4hcteneuonb3wxnv.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531883/gallery/eppcymltuprryhzyxl1b.jpg",
+    "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531883/gallery/bqlzx0abvfrjioztunfr.jpg",
+      ];
+    
+      // Get the image container element
+      var imageContainer = document.getElementById('imageContainer');
+    
+      // Loop through the image links array and create img elements
+      imageLinks.forEach(function (link) {
+        var img = document.createElement('img');
+        img.src = link;
+        img.className = 'img-fluid';
+        img.alt = '';
+        img.srcset = '';
+        
+        // Create a container div for each image
+        var div = document.createElement('div');
+        div.className = 'col-sm-4 col-md-4 col-lg-4 mb-3';
+        div.appendChild(img);
+    
+        // Append the container div to the image container
+        imageContainer.appendChild(div);
+      });
+    </script>
   </body>
 </html>
