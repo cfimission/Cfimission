@@ -8,6 +8,7 @@
         body {
             margin: 0;
             overflow: hidden;
+            background-color: #000; /* Set the background color to black */
         }
 
         #myVideo {
@@ -33,28 +34,28 @@
         }
 
         #startButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Initial box-shadow for a subtle glow */
-}
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Initial box-shadow for a subtle glow */
+        }
 
-#startButton:hover {
-    background-color: #45a049; /* Darker shade on hover */
-    transform: translate(-50%, -50%) scale(1.05);
-    box-shadow: 0 0 20px rgba(69, 160, 73, 0.8), 0 0 10px rgba(0, 0, 0, 0.3);
-    /* Glow effect on hover */
-}
+        #startButton:hover {
+            background-color: #45a049; /* Darker shade on hover */
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 0 20px rgba(69, 160, 73, 0.8), 0 0 10px rgba(0, 0, 0, 0.3);
+            /* Glow effect on hover */
+        }
     </style>
 </head>
 <body>
@@ -77,6 +78,7 @@
         var video = document.getElementById('myVideo');
         video.play();
         document.getElementById('startButton').style.display = 'none';
+        document.body.style.backgroundColor = 'transparent'; /* Set background to transparent when button is clicked */
     }
 
     // Get the video element
@@ -86,6 +88,7 @@
         redirectToPage();
     });
 </script>
+
 
 </body>
 </html>
