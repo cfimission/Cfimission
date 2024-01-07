@@ -211,7 +211,9 @@
     opacity: 1;
   }
  
-
+.section32{
+  background-color: #008CFE;
+}
 
   @media (max-width: 768px) {
     .coursel{

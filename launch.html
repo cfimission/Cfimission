@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Redirect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #myVideo {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #myVideo::-webkit-media-controls {
+            display: none !important;
+        }
+
+        #myVideo::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+
+        #myVideo::-webkit-media-controls-panel {
+            display: none !important;
+        }
+
+        #myVideo::-webkit-media-controls-play-button {
+            display: none !important;
+        }
+
+        #startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Initial box-shadow for a subtle glow */
+}
+
+#startButton:hover {
+    background-color: #45a049; /* Darker shade on hover */
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 20px rgba(69, 160, 73, 0.8), 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Glow effect on hover */
+}
+    </style>
+</head>
+<body>
+
+<!-- Your video element -->
+<video id="myVideo">
+    <source src="./video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<!-- Start Video Button -->
+<button id="startButton" onclick="startVideo()">Launch The Site</button>
+
+<script>
+    function redirectToPage() {
+        window.location.href = 'index.html';
+    }
+
+    function startVideo() {
+        var video = document.getElementById('myVideo');
+        video.play();
+        document.getElementById('startButton').style.display = 'none';
+    }
+
+    // Get the video element
+    var video = document.getElementById('myVideo');
+
+    video.addEventListener('ended', function() {
+        redirectToPage();
+    });
+</script>
+
+</body>
+</html>
