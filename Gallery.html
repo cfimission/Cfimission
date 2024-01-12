@@ -57,22 +57,26 @@
       </div>
     </nav>
 
-<div class="banner">
+<div class="banner" style="margin-bottom: 10px;">
   <h1>Gallery</h1>
 </div>
 
-<div style="padding-top: 10px;">
-  <div class="container text-center">
-    <div class="row" id="imageContainer">
-    </div>
+<div id="carouselExample" class="carousel slide w-50  mx-auto" data-bs-ride="carousel" data-bs-interval="1000" style="width: 30%;">
+  <div class="carousel-inner">
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
 
 
-
-
-<div class="parallax-container">
+<div class="parallax-container" style="margin-top: 10px;">
   <div class="content">
     <h1>
       Send Us Your Prayer Request!</h1>
@@ -202,24 +206,22 @@
     "https://res.cloudinary.com/dvmn1kn4y/image/upload/v1704531883/gallery/bqlzx0abvfrjioztunfr.jpg",
       ];
     
-      // Get the image container element
-      var imageContainer = document.getElementById('imageContainer');
     
-      // Loop through the image links array and create img elements
-      imageLinks.forEach(function (link) {
-        var img = document.createElement('img');
-        img.src = link;
-        img.className = 'img-fluid';
-        img.alt = '';
-        img.srcset = '';
-        
-        // Create a container div for each image
-        var div = document.createElement('div');
-        div.className = 'col-sm-4 col-md-4 col-lg-4 mb-3';
-        div.appendChild(img);
-    
-        // Append the container div to the image container
-        imageContainer.appendChild(div);
+        // Get the carousel inner element
+        var carouselInner = document.querySelector('.carousel-inner');
+
+        // Loop through the image links array and create carousel items
+        imageLinks.forEach(function (link, index) {
+            var item = document.createElement('div');
+            item.className = 'carousel-item' + (index === 0 ? ' active' : ''); // Set the first item as active
+
+            var img = document.createElement('img');
+            img.src = link;
+            img.className = 'd-block mx-auto w-100';
+            img.alt = '';
+
+            item.appendChild(img);
+            carouselInner.appendChild(item);
       });
     </script>
   </body>
